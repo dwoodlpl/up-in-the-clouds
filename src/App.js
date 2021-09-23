@@ -1,23 +1,10 @@
-import logo from './assets/LPL_Financial_logo.svg';
-import './App.css';
+import LandingPage from "./components/pages/LandingPage";
+import "./css/App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>
-          Up In The Clouds
-        </h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App d-flex flex-column" style={{ height: "100%" }}>
+      <LandingPage />
     </div>
   );
 }
