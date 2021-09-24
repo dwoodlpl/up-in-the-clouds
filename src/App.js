@@ -12,14 +12,16 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import Amplify, { Auth, Hub } from "aws-amplify";
+// import secure from "./data/dev_secure.js";
+import secure from "./data/secure.js";
+// import awsconfig from "./dev-aws-exports2.js";
+import awsconfig from "./aws-exports.js";
 
 // if prod
-import("./aws-exports").then((awsconfig) => {
-  console.log({ awsconfig });
-  awsconfig.oath.redirectSignIn = window.location.hostname;
-  awsconfig.oath.redirectSignOut = window.location.hostname;
-  Amplify.configure(awsconfig);
-});
+console.log({ awsconfig });
+awsconfig.oauth["redirectSignIn"] = window.location.hostname;
+awsconfig.oauth["redirectSignOut"] = window.location.hostname;
+Amplify.configure(awsconfig);
 // if dev
 //   import("./dev-aws-exports2").then((awsconfig) => {
 //     awsconfig.oath.redirectSignIn = window.location.hostname;
@@ -27,6 +29,14 @@ import("./aws-exports").then((awsconfig) => {
 //     Amplify.configure(awsconfig);
 //   }
 //
+
+var BoxSDK = require("box-node-sdk");
+var bSDK = new BoxSDK({
+  clientID: secure.clientID,
+  clientSecret: secure.clientSecret,
+});
+
+var boxClient = bSDK.getBasicClient(secure.devToken);
 
 library.add(fab, faCheckSquare, faCoffee, faUser);
 

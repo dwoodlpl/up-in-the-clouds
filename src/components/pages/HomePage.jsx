@@ -8,13 +8,15 @@ function HomePage(props) {
   return (
     <div>
       <div className="d-flex flex-row justify-content-between p-2">
-        <img
-          src={logo}
-          className="lpl-logo"
-          alt="logo"
-          onClick={(e) => navigateTo("/")}
-          style={{ height: "30px", cursor: "pointer" }}
-        />
+        <span style={{ cursor: "pointer" }}>
+          <img
+            src={logo}
+            className="lpl-logo"
+            alt="logo"
+            onClick={(e) => navigateTo("/")}
+            style={{ height: "30px", cursor: "pointer" }}
+          />
+        </span>
         <SignOutButton />
       </div>
       <Switch></Switch>

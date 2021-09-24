@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^12.8.3",
     "aws-amplify": "^4.3.0",
     "bootstrap": "^5.1.1",
+    "box-node-sdk": "^1.39.0",
     "box-ui-elements": "^13.0.0",
     "font-awesome": "^4.7.0",
     "react": "^17.0.2",
