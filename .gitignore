@@ -23,4 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 src/data/dev_secure.js
-src/dev-aws-exports.js
+# src/dev-aws-exports.js
