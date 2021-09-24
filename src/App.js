@@ -11,7 +11,8 @@ import {
   faCoffee,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import awsconfig from "./dev-aws-exports";
+import awsconfig from "./aws-exports";
+// import awsconfig from "./dev-aws-exports";
 import Amplify, { Auth, Hub } from "aws-amplify";
 
 Amplify.configure(awsconfig);
