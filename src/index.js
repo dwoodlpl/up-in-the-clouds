@@ -5,6 +5,9 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import "./css/index.css";
+import "box-ui-elements/i18n/en-US";
+import "box-ui-elements/dist/explorer.css";
+
 import { Router, Route, Switch } from "react-router";
 
 ReactDOM.render(

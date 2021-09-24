@@ -33,6 +33,7 @@ function SignIn(props) {
           window.alert(err.message);
         });
       console.log({ user });
+      navigateTo("/");
     } catch (error) {
       console.log("error signing in", error);
     }

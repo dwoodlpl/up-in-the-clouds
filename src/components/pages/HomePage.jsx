@@ -1,10 +1,14 @@
 import React from "react";
-import { Switch } from "react-router";
+import { Route, Switch } from "react-router";
 import SignOutButton from "../SignOutButton";
 import logo from "../../assets/LPL_Financial_logo.svg";
+import HowToModule from "../HowToModule";
+import AnalyticsModule from "../AnalyticsModule";
+import DocumentScanner from "../DocumentScanner";
 
 function HomePage(props) {
   const { navigateTo } = props;
+
   return (
     <div>
       <div className="d-flex flex-row justify-content-between p-2">
@@ -19,7 +23,43 @@ function HomePage(props) {
         </span>
         <SignOutButton />
       </div>
-      <Switch></Switch>
+      <Switch>
+        <Route
+          exact
+          path="/"
+          render={(props) => (
+            <>
+              <div className="d-flex flex-row justify-content-space">
+                <button
+                  className="btn btn-primary"
+                  onClick={(e) => navigateTo("/how-to")}
+                >
+                  Knowledge Base
+                </button>
+                <button
+                  className="btn btn-primary"
+                  onClick={(e) => navigateTo("/analytics")}
+                >
+                  Analytics
+                </button>
+              </div>
+              <div>
+                <DocumentScanner />
+              </div>
+            </>
+          )}
+        />
+        <Route
+          exact
+          path="/how-to"
+          render={(props) => <HowToModule {...props} />}
+        />
+        <Route
+          exact
+          path="/analytics"
+          render={(props) => <AnalyticsModule {...props} />}
+        />
+      </Switch>
     </div>
   );
 }
