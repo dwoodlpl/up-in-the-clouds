@@ -3,7 +3,8 @@ import { IntlProvider } from "react-intl";
 import ContentExplorer from "box-ui-elements/es/elements/content-explorer";
 import ContentUploader from "box-ui-elements/es/elements/content-uploader";
 import messages from "box-ui-elements/i18n/en-US";
-import dev_secure from "../data/dev_secure";
+import dev_secure from "../data/secure.js";
+// import dev_secure from "./data/dev_secure.js";
 
 function DocumentScanner(props) {
   return (
