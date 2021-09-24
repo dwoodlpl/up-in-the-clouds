@@ -18,7 +18,7 @@ import awsconfig from "./aws-exports.js";
 // import awsconfig from "./dev-aws-exports2.js";
 
 // if prod
-console.log({ awsconfig });
+console.log({ awsconfig, secure });
 awsconfig.oauth["redirectSignIn"] = window.location.hostname;
 awsconfig.oauth["redirectSignOut"] = window.location.hostname;
 Amplify.configure(awsconfig);
