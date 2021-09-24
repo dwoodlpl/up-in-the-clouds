@@ -11,11 +11,17 @@ import {
   faCoffee,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import awsconfig from "./aws-exports";
-// import awsconfig from "./dev-aws-exports";
 import Amplify, { Auth, Hub } from "aws-amplify";
 
-Amplify.configure(awsconfig);
+if (process.env.prod) {
+  import("./aws-exports").then((awsconfig) => {
+    Amplify.configure(awsconfig);
+  });
+} else {
+  import("./dev-aws-exports").then((awsconfig) => {
+    Amplify.configure(awsconfig);
+  });
+}
 
 library.add(fab, faCheckSquare, faCoffee, faUser);
 
