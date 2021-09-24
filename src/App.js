@@ -15,6 +15,7 @@ import Amplify, { Auth, Hub } from "aws-amplify";
 
 // if (process.env.prod) {
 import("./aws-exports").then((awsconfig) => {
+  console.log({ awsconfig });
   Amplify.configure(awsconfig);
 });
 // } else {
