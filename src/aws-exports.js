@@ -1,4 +1,4 @@
-const exports = {
+const exp = {
   aws_project_region: process.env.project_region,
   aws_cognito_identity_pool_id: process.env.cognito_identity_pool_id,
   aws_cognito_region: process.env.project_region,
@@ -14,4 +14,4 @@ const exports = {
   },
 };
 
-export default exports;
+export default exp;
