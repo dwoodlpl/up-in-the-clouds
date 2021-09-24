@@ -1,4 +1,4 @@
-export default {
+const exports = {
   aws_project_region: process.env.project_region,
   aws_cognito_identity_pool_id: process.env.cognito_identity_pool_id,
   aws_cognito_region: process.env.project_region,
@@ -13,3 +13,5 @@ export default {
     responseType: "code", //'code' or 'token', note that REFRESH token will only be generated when the responseType is code
   },
 };
+
+export default exports;
