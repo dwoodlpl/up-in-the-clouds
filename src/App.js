@@ -12,10 +12,10 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import Amplify, { Auth, Hub } from "aws-amplify";
-// import secure from "./data/secure.js";
-import secure from "./data/dev_secure.js";
-// import awsconfig from "./aws-exports.js";
-import awsconfig from "./dev-aws-exports2.js";
+import secure from "./data/secure.js";
+// import secure from "./data/dev_secure.js";
+import awsconfig from "./aws-exports.js";
+// import awsconfig from "./dev-aws-exports2.js";
 
 // if prod
 console.log({ awsconfig });
