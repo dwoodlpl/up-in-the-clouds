@@ -13,15 +13,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Amplify, { Auth, Hub } from "aws-amplify";
 
-if (process.env.prod) {
-  import("./aws-exports").then((awsconfig) => {
-    Amplify.configure(awsconfig);
-  });
-} else {
-  import("./dev-aws-exports").then((awsconfig) => {
-    Amplify.configure(awsconfig);
-  });
-}
+// if (process.env.prod) {
+import("./aws-exports").then((awsconfig) => {
+  Amplify.configure(awsconfig);
+});
+// } else {
+//   import("./dev-aws-exports2").then((awsconfig) => {
+//     Amplify.configure(awsconfig);
+//   });
+// }
 
 library.add(fab, faCheckSquare, faCoffee, faUser);
 
