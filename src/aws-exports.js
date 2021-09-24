@@ -8,8 +8,8 @@ const exp = {
   oauth: {
     domain: process.env.domain,
     scope: ["email", "profile", "openid", "aws.cognito.signin.user.admin"],
-    redirectSignIn: window.location.hostname, //"http://localhost:3000/",
-    redirectSignOut: window.location.hostname, //"http://localhost:3000/",
+    redirectSignIn: "https://main.d3em1gj15567cr.amplifyapp.com/",
+    redirectSignOut: "https://main.d3em1gj15567cr.amplifyapp.com/",
     responseType: "code", //'code' or 'token', note that REFRESH token will only be generated when the responseType is code
   },
 };
