@@ -13,16 +13,20 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Amplify, { Auth, Hub } from "aws-amplify";
 
-// if (process.env.prod) {
+// if prod
 import("./aws-exports").then((awsconfig) => {
   console.log({ awsconfig });
+  awsconfig.oath.redirectSignIn = window.location.hostname;
+  awsconfig.oath.redirectSignOut = window.location.hostname;
   Amplify.configure(awsconfig);
 });
-// } else {
+// if dev
 //   import("./dev-aws-exports2").then((awsconfig) => {
+//     awsconfig.oath.redirectSignIn = window.location.hostname;
+//     awsconfig.oath.redirectSignOut = window.location.hostname;
 //     Amplify.configure(awsconfig);
-//   });
-// }
+//   }
+//
 
 library.add(fab, faCheckSquare, faCoffee, faUser);
 
